@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>英単語学習</title><link rel="stylesheet" href="style.css"></head>
+<body><main class="card">
+<section id="s-load"><p id="msg">読み込み中...</p><button id="retry" hidden>再試行</button></section>
+<section id="s-consent" hidden>
+<h1>研究へのご協力について</h1>
+<p class="small">この学習は卒業研究の実験です．回答と時刻を匿名のIDで記録し，研究以外には使用しません．いつでも中止できます．</p>
+<label class="chk"><input type="checkbox" id="agree"> 内容を理解し，同意します</label>
+<button id="b-consent" disabled>はじめる</button></section>
+<section id="s-home" hidden>
+<h1>英単語学習</h1><p id="who" class="small"></p><p id="day"></p>
+<button id="b-study">学習を始める</button>
+<button id="b-test" hidden>最終テストを受ける</button >
+<p id="note" class="small"></p></section>
+<section id="s-study" hidden>
+<div id="pg"><div id="pgtext" class="small"></div><progress id="bar" value="0" max="100"></progress></div>
+<div id="qno" class="small" hidden></div>
+<div id="word"></div>
+<p class="small">この英単語の意味を入力してください．</p>
+<input type="text" id="ans" autocomplete="off" autocapitalize="off" placeholder="ここに日本語を入力">
+<button id="b-ans">回答する</button>
+<div id="fb" aria-live="polite"></div>
+<button id="b-next" hidden>次へ</button></section>
+<section id="s-end" hidden><h1 id="end-t"></h1><p id="end-p"></p><button id="b-home">戻る</button></section>
+</main><script src="script.js"></script></body></html>
